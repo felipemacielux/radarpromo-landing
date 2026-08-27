@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+@import "@fontsource/outfit/800.css";
+
+@theme {
+  --font-sans: "Outfit", system-ui, "Segoe UI", sans-serif;
+
+  --color-brand-green: #18c83e;
+  --color-brand-green-deep: #073d24;
+  --color-brand-yellow: #ffc21a;
+  --color-brand-orange: #ff6b00;
+  --color-brand-mint: #ddfbe5;
+  --color-brand-ink: #111827;
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-white text-brand-ink dark:bg-[#07130c] dark:text-brand-mint;
+    font-feature-settings: "ss01" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
